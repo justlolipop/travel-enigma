@@ -1,0 +1,29 @@
+
+@import "tailwindcss"; 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+ 
+@theme {
+  --font-primary: 'Orbitron', sans-serif;
+  --font-secondary: 'Teko', sans-serif;
+}
+
+.dark {
+  --PRIMARY_COLOR: var(--color-white);
+  --SECONDARY_COLOR: var(--color-gray-800);
+  --TERTIARY_COLOR: var(--color-gray-700);
+  --PRIMARY_BG: var(--color-gray-900);
+  --SECONDARY_BG: var(--color-gray-800);
+  --TERTIARY_BG: var(--color-gray-700);
+}
+
+.light {
+  
+  --PRIMARY_COLOR: var(--color-gray-900);
+  --SECONDARY_COLOR: var(--color-gray-800);
+  --TERTIARY_COLOR: var(--color-gray-700);
+  --PRIMARY_BG: var(--color-white);
+  --SECONDARY_BG: var(--color-gray-100);
+  --TERTIARY_BG: var(--color-gray-200);
+  
+}
+

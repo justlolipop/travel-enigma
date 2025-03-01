@@ -1,0 +1,14 @@
+# Ignore node_modules in both root and frontend
+node_modules/
+frontend/node_modules/
+
+# Ignore build and dependency-related files
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+
+# Ignore environment files
+.env
+frontend/.env
+backend/.env
