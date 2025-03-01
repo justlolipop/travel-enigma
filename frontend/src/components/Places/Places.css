@@ -1,0 +1,203 @@
+.places-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.5s ease-in-out;
+  padding: 20px;
+  backdrop-filter: blur(50px); /* Adjust blur intensity */
+}
+
+.places-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(50px); /* Adjust blur intensity */
+  background: rgba(0, 0, 0, 0.3); /* Optional: Adds a slight dark overlay */
+  z-index: -1;
+}
+
+.places-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Search Bar */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category-button {
+  background: #ddd;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.category-button:hover {
+  background: #159bb3;
+  color: white;
+}
+
+.category-button.active {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Category Section */
+.category-section {
+  margin-top: 30px;
+}
+
+h2 {
+  color: #159bb3;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+ 
+
+
+/* Slider wrapper with navigation buttons */
+.slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 0;
+  background-color: #f8f9fa00; /* Light background for contrast */
+}
+
+/* Scrollable container */
+.slider-container {
+  display: flex;
+  gap: 20px; /* Increased gap for better spacing */
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE */
+  width: 90%;
+  padding: 20px 0;
+}
+
+/* Hide scrollbar for Webkit browsers */
+.slider-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card styling */
+.place-card {
+  min-width: 280px; /* Slightly wider for better content display */
+  max-width: 280px;
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  text-align: center;
+  padding: 15px;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.place-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Image inside card */
+.place-image {
+  width: 100%;
+  height: 180px; /* Slightly taller for better visuals */
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Card title */
+.place-title {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50; /* Dark blue-gray for contrast */
+  margin: 10px 0;
+}
+
+/* Card description */
+.place-description {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  color: #666; /* Gray for readability */
+  margin: 10px 0;
+}
+
+/* Buttons */
+.book-button {
+  background-color: #2196f3; /* Bright blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.book-button:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Slider navigation buttons */
+.slider-button {
+  background: rgba(33, 150, 243, 0.8); /* Semi-transparent blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 15px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50%; /* Circular buttons */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.slider-button:hover {
+  background: rgba(25, 118, 210, 0.9); /* Darker blue on hover */
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.slider-button.left {
+  left: 10px;
+}
+
+.slider-button.right {
+  right: 10px;
+}

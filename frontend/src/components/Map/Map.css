@@ -1,0 +1,132 @@
+ 
+/* Malaysia Map */
+.malaysia_map {
+  position: relative;
+  /* background-color: #1e1e1e;  */
+  height: 750px;
+  padding: 80px 100px;
+  /* border-radius: 12px;   */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* Deeper shadow for depth */
+  overflow: hidden; /* Ensure content stays within bounds */
+ 
+  background: #111;
+  background-image: 
+    linear-gradient(
+      35deg,
+      rgb(18, 18, 27),
+      75%,
+      hsla(233, 63%, 7%, 0.6)
+    ),
+    linear-gradient(
+      transparent calc(50% - 1px),
+      #fff 1px,
+      transparent calc(50% + 1px) 100%
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(50% - 1px),
+      #fff 1px,
+      transparent calc(50% + 1px) 100%
+    );
+  background-size: 100% 100%, 40px 40px, 40px 40px;
+
+}
+
+.map_container h2 {
+  font-family: "Signika Negative", sans-serif;
+  font-size: 2.8rem; /* Slightly larger for emphasis */
+  color: #1b8eec; /* Vibrant green for contrast */
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
+}
+
+.map_container p {
+  font-family: "Signika Negative", sans-serif;
+  font-weight: 400; /* Semi-bold for better readability */
+  color: #E0E0E0; /* Light gray for contrast */
+  text-align: center;
+  padding-top: 10px;
+  font-size: 1.2rem; /* Slightly larger for better readability */
+}
+
+.map_container path {
+  fill: #2C2C3A; /* Darker fill for subtlety */
+  stroke: #FFFFFF; /* White stroke for contrast */
+  stroke-width: 0.5;
+  transition: fill 300ms ease, transform 300ms ease; /* Smooth transitions */
+}
+
+.map_container path:hover {
+  fill: #3A3CC3; /* Bright hover color */
+  transform: scale(1.02); /* Slight scale increase on hover */
+}
+
+.land {
+  fill: #444; /* Neutral gray for land */
+  stroke: #FFFFFF; /* White stroke for clarity */
+  stroke-width: 0.5;
+  cursor: pointer;
+  transition: fill 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.active {
+  fill: #cc00ff !important; /* Vibrant active color */
+  transform: scale(1.05); /* Slightly larger scale */
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out; /* Faster transition */
+}
+
+.highlighted {
+  fill: #FF1744; /* Brighter highlight color */
+  stroke: #FF1744;
+}
+
+.background_container {
+  position: absolute;
+  left: 390px;
+  top: 180px;
+  display: flex;
+  background: rgba(33, 33, 33, 0.9); /* Darker, more opaque background */
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  z-index: 10;
+  transition: opacity 0.5s ease-in-out;
+  width: 500px; /* Fixed width */
+  justify-content: flex-end;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Deeper shadow */
+}
+
+.background_container img {
+  width: 40%; /* Adjust size */
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px; /* Slightly rounded corners */
+  margin-right: 15px; /* Spacing */
+  transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.background_container img:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.text_content {
+  width: 60%; /* Adjust width */
+  display: flex;
+  flex-direction: column; /* Stack title & description */
+}
+
+.background_container h3 {
+  font-size: 1.3rem; /* Slightly larger */
+  font-family: "Signika Negative", sans-serif;
+  color: #FFFFFF; /* White for contrast */
+  margin: 0 0 10px 0; /* Spacing below title */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Soft shadow */
+}
+
+.description_text {
+  font-size: 1rem; /* Adjusted for readability */
+  font-family: "Signika Negative", sans-serif;
+  color: #E0E0E0; /* Light gray for readability */
+  margin: 0; /* Remove default margin */
+  line-height: 1.6; /* Improved line height */
+}
