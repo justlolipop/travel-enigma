@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import "./Places.css";
-import { BasicDepthPacking } from "three";
+ 
 
 const Places = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -118,9 +118,13 @@ const Places = () => {
                   {groupedData[category].map((place, index) => (
                     <div key={index} className="place-card">
                       <img src={place.image} alt={place.placeName} className="place-image" />
-                      <h3>{place.placeName}</h3>
-                      <p>{place.state}</p>
-                      <button className="book-button">{place.button}</button>
+                      <div className="place-info-overlay">
+                        <div className="place-info">
+                          <h3 className="place-title">{place.placeName}</h3>
+                          <p className="place-description">{place.state}</p>
+                        </div>
+                        <button className="book-button">{place.button}</button>
+                      </div>
                     </div>
                   ))}
                 </div>

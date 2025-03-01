@@ -1,3 +1,9 @@
+:root {
+  --place-title: #fff;  
+  --place-description: #ddd;  
+}
+
+
 .places-section {
   position: relative;
   background-size: cover;
@@ -35,6 +41,7 @@
   font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
+  color: #ddd
 }
 
 /* Category Filters */
@@ -117,13 +124,21 @@ h2 {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Softer shadow */
   text-align: center;
   padding: 15px;
-  background: white;
+  background: #ffffff10;
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .place-card:hover {
   transform: translateY(-5px); /* Lift effect on hover */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.place-info-overlay {
+  display: flex;
+}
+
+.place-info {
+  width: 70%;
 }
 
 /* Image inside card */
@@ -134,21 +149,25 @@ h2 {
   border-radius: 8px; /* Rounded corners */
 }
 
+
 /* Card title */
 .place-title {
+  text-align: left;
   font-family: "Segoe UI", sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #2c3e50; /* Dark blue-gray for contrast */
-  margin: 10px 0;
+  color: var(--place-title); /* White text */
+  /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);   */
+  margin-bottom: 5px;
 }
 
 /* Card description */
 .place-description {
+  text-align: left;
   font-family: "Segoe UI", sans-serif;
-  font-size: 0.9rem;
-  color: #666; /* Gray for readability */
-  margin: 10px 0;
+  font-size: 1rem;
+  color: var(--place-description); /* Light gray */
+ 
 }
 
 /* Buttons */
