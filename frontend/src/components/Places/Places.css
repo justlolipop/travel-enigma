@@ -3,7 +3,6 @@
   --place-description: #ddd;  
 }
 
-
 .places-section {
   position: relative;
   background-size: cover;
@@ -12,6 +11,7 @@
   transition: background-image 0.5s ease-in-out;
   padding: 20px;
   backdrop-filter: blur(50px); /* Adjust blur intensity */
+  min-height: 60vh;
 }
 
 .places-section::before {
@@ -77,10 +77,12 @@
   margin-top: 30px;
 }
 
+/* Category Title */
 h2 {
-  color: #159bb3;
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 2rem;
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 
@@ -191,7 +193,7 @@ h2 {
 
 /* Slider navigation buttons */
 .slider-button {
-  background: rgba(33, 150, 243, 0.8); /* Semi-transparent blue */
+  background: rgba(222, 222, 243, 0.3); /* Semi-transparent blue */
   color: white;
   border: none;
   cursor: pointer;

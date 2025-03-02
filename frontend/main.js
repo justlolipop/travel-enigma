@@ -8,7 +8,7 @@ scene.background = new THREE.Color('black'); // Set to black or any color you pr
 
 
 const loader = new THREE.TextureLoader();
-const texture = loader.load( '/src/images/earth.jpeg' );
+const texture = loader.load('/images/earth.jpg' );
 const maskTexture = loader.load('/src/images/maskmap.png');
 const sphereGeometry = new THREE.SphereGeometry(5,30,30)
 const sphereMaterial = new THREE.MeshBasicMaterial({
